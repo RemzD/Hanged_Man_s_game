@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor: url(..//images/arrow.png), default;
+}
+
+@font-face {
+    font-family: 'eight-bit_madnessregular';
+    src: url('../fonts/8-bitmadness.woff2') format('woff2'),
+        url('../fonts/8-bitmadness.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'eight-bit_madnessregular';
+    background-color: #0D0D0D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    height: 75vh;
+    width: 50vw;
+}
+
+.frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2221;
+    background-image: url(../images/wood.png);
+    border: 5px solid #8a5a20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.frame2 {
+    position: absolute;
+    height: 95%;
+    width: 70%;
+    background-color: #68716e;
+    left: 2%;
+    border: 5px solid black;
+    background-image: url(../images/brushed-alum.png);
+    opacity: 0.8;
+
+}
+
+.frame3 {
+    position: absolute;
+    height: 95%;
+    width: 20%;
+    left: 78%;
+    border: 5px solid black;
+    background-color: #68716e;
+    background-image: url(../images/brushed-alum.png);
+
+}
+
+#fade{
+    position: absolute;
+    top: 77%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 82%;
+    background-image: url('../images/button.png');
+    background-size: cover;
+    border-style: none;
+
+}
+
+#fade:disabled{
+    background-color: grey;
+}
+
+#screen{
+    position: absolute;
+    width: 67%;
+    height: 88%;
+    border-radius: 18%;
+    background-color: #004505;
+    background-image: url('../images/diagonal-noise.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 4%;
+
+}
+
+
+#titlescreen{
+    position: absolute;
+    transition: all 2s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+
+#screenOff{
+    position: absolute;
+    width: 67%;
+    height: 88%;
+    background-color: black;
+    border-radius: 18%;
+    left: 4%;
+}
+
+
+#reflet{
+    position: absolute;
+    top: 3%;
+    left: 56%;
+    opacity: 0.2;
+}
+
+#ready{
+    position: absolute;
+    top: 85%;
+    animation: fadeIn 1s infinite alternate;
+    box-shadow: 0px 0px 40px #eee;
+    cursor: url(../images/pointer.png), pointer;
+}
+
+
+
+#audioBtn{
+    background-image: url(../images/button2.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 54%;
+    left: 82%;
+    border-style: none;
+    transition: 1.5sec ease-in;
+}
+
+
+.clavier{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+    margin: 20px;
+    top: 70%;
+    visibility: hidden;
+    left: 5%;
+}
+
+.touche{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-image: none;
+    color: greenyellow;
+    font-family: 'eight-bit_madnessregular';
+    font-size: 20px;
+    border: 2px solid green;
+
+}
+
+.pendu {
+    position: absolute;
+    max-height: 250px;
+    top: 3%;
+    left: 35%;
+}
+
+#motATrouver {
+    position: absolute;
+    top: 60%;
+    font-family: 'eight-bit_madnessregular';
+    font-size: 35px;
+    display: none;
+}
+
+#nv_game{
+    position: absolute;
+}
+
+
+#gameover{
+    display: none;
+
+}
+
+#continue{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 18%;
+    display: none;
+}
+
+#continue img{
+    width: 100%;
+}
+
+#yes{
+    position:absolute;
+    top: 65%;
+    animation: fadeIn 1s infinite alternate;
+    box-shadow: 0px 0px 40px #eee;
+    left: 30%;
+    font-size: 30px;
+}
+
+#no{
+    position: absolute;
+    top: 65%;
+    animation: fadeIn 1s infinite alternate;
+    box-shadow: 0px 0px 40px #eee;
+    left: 60%;
+    font-size: 30px;
+}
+
+
+#yes:hover {
+    color: lightgreen;
+    cursor: url(../images/pointer.png), pointer;
+}
+
+#no:hover {
+    color: red;
+    cursor: url(../images/pointer.png), pointer;
+}
+
+#recommencer{
+    position: absolute;
+    top: 68%;
+}
+
+#compteur{
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    font-size: 30px;
+    display: none;
+}
+
+#grille{
+    position: absolute;
+    left: 10%;
+    top: 3%;
+    height: 50%;
+    width: 80%;
+
+}
+
+@media only screen and (max-width: 1220px){
+    #audioBtn{
+        left: 10%;
+    }
+    #fade{
+        left: 10%;
+    }
+    
+}
+
+@media only screen and (max-width: 1080px){
+
+    
+}

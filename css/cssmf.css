@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor: url(..//images/arrow.png), default;
+}
+
+@font-face {
+    font-family: 'eight-bit_madnessregular';
+    src: url('../fonts/8-bitmadness.woff2') format('woff2'),
+        url('../fonts/8-bitmadness.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'eight-bit_madnessregular';
+    background-color: #0D0D0D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tvframes{
+    display:flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    margin: 1em;
+    justify-content: space-between;
+}
+
+
+
+#frame2 {
+    display: block;
+    height: 88%;
+}
+
+#screen{
+    position: relative;
+    height: 100%;
+    border-radius: 18%;
+    background-color: #004505;
+    background-image: url('../images/diagonal-noise.png');
+}
+
+#reflect{
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    opacity: 0.2;
+}
+
+#titlescreen{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+}
+
+#titleimage{
+    width: 90%;
+    margin-top: 35%;
+
+}
+
+#ready{
+
+    animation: fadeIn 1s infinite alternate;
+    box-shadow: 0px 0px 40px #eee;
+    cursor: url(../images/pointer.png), pointer;
+    font-size: 1.5em;
+    width: 7em;
+    margin: 15% 35%;
+}
+
+#gamescreen{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.keyboard{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    height: 30%;
+    align-items: center;
+    margin: 20px;
+}
+
+.touche{
+    width: 1.5em;
+    font-size: 1.2em;
+    height: 1.5em;
+    margin: 0.1em;
+    font-family: 'eight-bit_madnessregular';
+    color: greenyellow;
+    border: 2px solid green;
+    background-color: transparent;
+}
+
+.hangedman {
+    margin: 1em;
+    max-height: 45%;
+}
+
+#wordDisplayed {
+    top: 55%;
+    font-family: 'eight-bit_madnessregular';
+    font-size: 1.2em;
+    margin: 1em;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#restart{
+    top: 65%;
+    font-size: 1.2em;
+    display: none;
+}
+
+#scorecount{
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    align-self: flex-start;
+    margin-left: 15%;
+}
+
+
+#gameoverscreen{
+
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    border-radius: 18%;
+    display: none;
+
+}
+
+#gameoverscreen img{
+    width: 90%;
+    margin-top: 5%;
+}
+
+#gameoverscreen div{
+    width:100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#yes{
+    animation: fadeIn 1s infinite alternate;
+    box-shadow: 0px 0px 40px #eee;
+    font-size: 2em;
+}
+
+#no{
+    animation: fadeIn 1s infinite alternate;
+    box-shadow: 0px 0px 40px #eee;
+    font-size: 2em;
+}
+
+
+#yes:hover {
+    color: lightgreen;
+    cursor: url(../images/pointer.png), pointer;
+}
+
+#no:hover {
+    color: red;
+    cursor: url(../images/pointer.png), pointer;
+}
+
+
+#screenOff{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 18%;
+    display: block;
+    position: absolute;
+}
+
+#frame3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#grille {
+    display: none;
+}
+
+
+#fade{
+    width: 100px;
+    height: 36px;
+    left: 5%;
+    background-image: url('../images/lowpower.png');
+    background-size: cover;
+    border-style: none;
+    background-color: transparent;
+
+
+}
+
+#fade:disabled{
+    background-color: grey;
+}
+
+
+#audioBtn{
+    background-image: url(../images/lowsound.png);
+    background-size: cover;
+    width: 100px;
+    height: 36px;
+    border-style: none;
+    transition: 1.5sec ease-in;
+    background-color: transparent;
+
+}
+
+button:active{
+    transform: translateY(4px);
+}
+
+
+@media only screen and (orientation:landscape){
+    #ready{
+        margin-bottom: 5%;
+    }
+
+    #titleimage{
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (min-width: 1080px) and (orientation: landscape){
+
+    .tvframes {
+        width: 60vw;
+        height: 70vh;
+        display: flex;
+        background-color: #2b2221;
+        background-image: url(../images/wood.png);
+        border: 5px solid #8a5a20;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .frame{
+        height: 95%;
+        background-color: #68716e;
+        border: 5px solid black;
+        background-image: url(../images/brushed-alum.png);
+    }
+
+
+    #frame2{
+        height: 95%;
+        width: 70%;
+        opacity: 1;
+
+    }
+
+    #screen {
+        width: 95%;
+        height: 95%;
+        margin: 2.5%;
+    }
+
+
+    #frame3 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    #grille {
+        height: 55%;
+        width: 75%;
+        display: block;
+
+    }
+
+    #fade {
+        background-image: url('../images/Power.png');
+        background-size: cover;
+    }
+
+    #audioBtn{
+        background-image: url(../images/button.png);
+        width: 90px;
+        height: 90px;
+
+    }
+
+    #fade{
+        background-image: url(../images/button.png);
+        width: 90px;
+        height: 90px;
+    }
+    
+    button:active{
+        transform: translateY(0px);
+    }
+
+}
